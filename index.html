@@ -7,7 +7,9 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/theme/custom-styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +26,204 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Is GraphQL The Better Alternative of REST</h2>
+				</section>
+				
+				<section>
+					<h4>What are REST and GrphQL</h4>
+					<div class="rest-wrapper d-f mb-30">
+						<img src="/assets/restapi.png" alt="" style="width: 250px">
+						<span>REST (Representational State Transfer)</span>
+					</div>
+					<div class="graphql-wrapper d-f">
+						<img src="/assets/graphql-logo.png" alt="" style="width: 250px">
+						<span>GraphQL (Graph Query Language)</span>
+					</div>
+
+					<ul class="mt-30">
+						<li>two ways to transfer data between the client and server</li>
+						<li>REST is an API design architecture whereas GraphQL is a query language/sification</li>
+					</ul>
+				</section>
+
+				<section data-background-transition="zoom" data-background-color="#F8DFBD" class="code">
+					<h4>REST Overview</h4>
+					<p>Everything is a resource which is identified by a URL</p>
+					<div class="d-f fz-26 mt-50 mb-50">
+						<div class="v-center f-50">
+							<span class="mr-30">/api/photo/list</span>
+							<img src="/assets/photo.png" alt="" style="width: 200px">
+						</div>
+						<div class="v-center f-50">
+							<span class="mr-30">/api/live/list</span>
+							<img src="/assets/live.png" alt="" style="width: 200px">
+						</div>
+					</div>
+					<span class="conculusion-bottom fragment fade-in">
+						Each request returns the whole resource object
+					</span>
+				</section>
+
+				<section>
+					<h4>REST Architecture</h4>
+					<img src="/assets/rest-arch.png" alt="" style="width: 700px">
+					<span class="conculusion-bottom fragment fade-in">
+						Multiple requests to fetch data for different resource
+					</span>
+				</section>
+
+				<section>
+					<h4>REST Limitations</h4>
+					<ul>
+						<li class="fragment fade-in">
+							<span class="pos-re">Over fetching <i>(99% of the requests)</i><img class="demo" src="/assets/demo.png" alt="">
+							</span>
+						</li>
+						<li class="fragment fade-in">
+								<span class="pos-re">
+									Multiple round trips to fetch related resources
+									<img class="demo" src="/assets/demo.png" alt="">
+								</span>
+							</li>
+						<li class="fragment fade-in">
+							<span class="pos-re">
+								Very hard to maitain good documnetation
+							</span>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>GraphQL Overview</h4>
+					<ul>
+						<li class="fragment fade-in">Single endpoint</li>
+						<li class="fragment fade-in">All request are executed against a schema</li>
+						<li class="fragment fade-in">The schema is strongly typed</li>
+						<li class="fragment fade-in">GraphQL is language agnostic</li>
+						<li class="fragment fade-in">Three operations - quering, mutating, and subscription</li>
+					</ul>
+				</section>
+
+				<section data-background-transition="zoom" data-background-color="#F8DFBD" class="code">
+					<h4>GraphQL Client-Server</h4>
+					<p>	
+						<div class="pos-re">
+							The server returns only the data the client requests - in very flexaible and predictable way
+							<img class="demo" src="/assets/demo.png" alt="" style="width: 140px; top: 50px; right: -40px">
+						</div>
+					</p>
+					<div class="image-wrapper">
+						<div class="query-response-example">
+							<div class="query-example-client">
+								<img src="/assets/graphql-client.png" alt="" style="width: 200px">
+								<img src="/assets/query.png" alt="" style="width: 500px">
+							</div>
+							<div class="fragment fade-in pos-re left">
+								<img src="/assets/query-response.png" alt="" style="width: 250px; margin-top: 40px">
+								<img src="/assets/arrow-red.png" alt="" class="arrow-left query-arrow-left">
+							</div>
+							<img src="/assets/arrow-red.png" alt="" class="query-arrow-right">
+						</div>
+						<img src="/assets/graphql-server.png" alt="" style="width: 250px">
+					</div>
+				</section>
+
+				<section>
+					<h4>GraphQL Architecture</h4>
+					<img src="/assets/graph-arc.png" alt="" style="width: 700px">
+				</section>
+
+				<section>
+					<h4>GraphQL Clients</h4>
+					<p><b class="green">Relay</b> and <b class="green">Apollo</b> are the most popular and sophisticated GraphQL clients available at the moment.</p>
+					<img src="/assets/replay-apollo.png" alt="" style="width: 700px">
+					<div class="left no-wrap">
+						Source: <a href="https://www.prisma.io/blog/relay-vs-apollo-comparing-graphql-clients-for-react-apps-b40af58c1534" style="display: inline-block" class="conculusion-bottom">prisma.io</a>
+					</div>
+				</section>
+
+				<section>
+					<h4>Apollo Features #1</h4>
+					<p>
+						<span class="pos-re">
+							Robust GraphQL ecosystem and powerful tooling
+							<img class="demo" src="/assets/demo.png" alt="">
+						</span>
+					</p>
+					<img src="/assets/tooling.png" alt="" style="width: 750px">
+				</section>
+
+				<section>
+					<h4>Apollo Features #2</h4>
+					<p>Incrementally adoptable</p>
+					<img src="/assets/adoption.png" alt="" style="width: 700px">
+				</section>
+
+				<section>
+					<h4>Apollo Features #3</h4>
+					<p>In memory cache - normalized data store for remote and local data</p>
+					<div class="d-f">
+						<img src="/assets/redux-cache.png" alt="" style="width: 522px; margin-right: 200px">
+						<img src="/assets/apollo-cache.png" alt="" style="width: 200px">
+					</div>
+				</section>
+
+				<section data-background-transition="zoom" data-background-color="#F8DFBD" class="code">
+					<h4>Apollo Features #4</h4>
+					<p>
+						<span class="pos-re">
+							Optimistic updates
+							<img class="demo" src="/assets/demo.png" alt="">
+						</span>
+					</p>
+					<img src="/assets/optimistinc.png" alt="" style="width: 520px">
+				</section>
+
+				<section data-background-transition="zoom" data-background-color="#F8DFBD" class="code">
+					<h4>Apollo Features #5</h4>
+					<p>
+						<span class="pos-re">
+							Real time updates
+							<img class="demo" src="/assets/demo.png" alt="">
+						</span>
+					</p>
+					<img src="/assets/subscription.png" alt="" style="width:420px">
+				</section>
+
+				<section >
+					<h4>Apollo Features #6</h4>
+					<ul>
+						<li>
+							<span class="pos-re">	
+								Increase development velocity
+								<img class="demo" src="/assets/demo.png" alt="">
+							</span>
+						</li>
+						<li>Increase overall page load performance</li>
+						<li>Error handling</li>
+						<li>Pagination with refetching options (loading state)</li>
+						<li>Server-side rendering</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>GraphQL Disadvantages</h4>
+					<ul>
+						<li>Caching request on the server/CDN</li>
+						<li>Calling the database for each resolver</li>
+						<li>Rate Limiting</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>GraphQL Cost of Implmention</h4>
+					<ul>
+						<li>Apollo Client and Server are open source (no cost)</li>
+						<li>Client - 120kB minified</li>
+						<li>Developer time - 1 week - basic client and server setup</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
@@ -42,7 +240,8 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				],
+				history: true
 			});
 		</script>
 	</body>

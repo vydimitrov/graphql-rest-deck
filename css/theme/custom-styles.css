@@ -1,0 +1,168 @@
+html, body, .reveal p, .reveal li, .reveal span, .reveal div{
+    font-family: 'Roboto';
+}
+
+.reveal .code h4,
+.reveal .code li,
+.reveal .code p,
+.reveal .code span,
+.reveal .code div,
+.reveal .code .conculusion-bottom {
+  color: #000;
+}
+
+.reveal section img {
+    border: none;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+  }
+  
+  .reveal li {
+    font-size: 32px;
+  }
+  
+  .reveal p {
+    font-size: 36px;
+  }
+  
+  .reveal li + li {
+    margin-top: 16px;
+  }
+  
+  .reveal .code h4,
+  .reveal .code li,
+  .reveal .code p,
+  .reveal .code .conculusion-bottom {
+    color: #000;
+  }
+
+  .reveal .mt-30 {
+      margin-top: 30px;
+  }
+
+
+  .reveal .mb-30 {
+    margin-bottom: 30px;
+}
+  
+  .reveal .self-image{
+    border-radius: 50%;
+  }
+
+  .reveal .v-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .reveal .space-between {
+      justify-content: space-between;
+  }
+
+.reveal .mr-100 {
+    margin-right: 100px;
+}
+
+
+.reveal .mr-50 {
+    margin-right: 50px;
+}
+
+.reveal .mr-30 {
+    margin-right: 30px;
+}
+
+.reveal .mt-50 {
+    margin-top: 50px;
+}
+
+
+.reveal .mb-50 {
+    margin-bottom: 50px;
+}
+
+.d-f {
+    display: flex;
+    align-items: center;
+}
+
+.f-50 {
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+.reveal .fz-26 {
+    font-size: 26px;
+}
+
+.reveal .conculusion-bottom {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 28px;
+    margin-top: 40px;
+  }
+
+  .image-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .query-example-client {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .query-example-client img:first-of-type {
+      margin-bottom: 30px;
+  }
+
+  .reveal  .query-response-example {
+      display: flex;
+      flex-direction: column;
+      padding-right: 150px;
+      position: relative;
+  }
+
+  .query-arrow-right {
+      position: absolute;
+      top: 100px;
+      right: 60px;
+      width: 100px;
+  }
+
+  .arrow-left {
+      transform: rotate(-180deg);
+  }
+
+  .query-arrow-left {
+    position: absolute;
+    top: 80px;
+    right: -70px;
+    width: 100px;
+}
+
+.pos-re {
+    position: relative;
+}
+
+.reveal .left {
+    text-align: left
+}
+
+.green {
+    color: #1ec95b;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.demo {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    right: -100px;
+}
