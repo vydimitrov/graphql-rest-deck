@@ -27,11 +27,11 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Is GraphQL The Better Alternative of REST</h2>
+					<h2>Is GraphQL the Better Alternative of REST?</h2>
 				</section>
 				
 				<section>
-					<h4>What are REST and GrphQL</h4>
+					<h4>What are REST and GraphQL</h4>
 					<div class="rest-wrapper d-f mb-30">
 						<img src="/assets/restapi.png" alt="" style="width: 250px">
 						<span>REST (Representational State Transfer)</span>
@@ -43,7 +43,7 @@
 
 					<ul class="mt-30">
 						<li>two ways to transfer data between the client and server</li>
-						<li>REST is an API design architecture whereas GraphQL is a query language/sification</li>
+						<li>REST is an API design architecture whereas GraphQL is a query language/specification</li>
 					</ul>
 				</section>
 
@@ -69,7 +69,7 @@
 					<h4>REST Architecture</h4>
 					<img src="/assets/rest-arch.png" alt="" style="width: 700px">
 					<span class="conculusion-bottom fragment fade-in">
-						Multiple requests to fetch data for different resource
+						Multiple requests to fetch data for different resources
 					</span>
 				</section>
 
@@ -88,7 +88,7 @@
 							</li>
 						<li class="fragment fade-in">
 							<span class="pos-re">
-								Very hard to maitain good documnetation
+								Maitaning good documentation is not optimal
 							</span>
 						</li>
 					</ul>
@@ -98,10 +98,10 @@
 					<h4>GraphQL Overview</h4>
 					<ul>
 						<li class="fragment fade-in">Single endpoint</li>
-						<li class="fragment fade-in">All request are executed against a schema</li>
+						<li class="fragment fade-in">All request are executed against a schema on the server</li>
 						<li class="fragment fade-in">The schema is strongly typed</li>
 						<li class="fragment fade-in">GraphQL is language agnostic</li>
-						<li class="fragment fade-in">Three operations - quering, mutating, and subscription</li>
+						<li class="fragment fade-in">Three operations - quering, mutation, and subscription</li>
 					</ul>
 				</section>
 
@@ -109,7 +109,7 @@
 					<h4>GraphQL Client-Server</h4>
 					<p>	
 						<div class="pos-re">
-							The server returns only the data the client requests - in very flexaible and predictable way
+							The server returns only the data the client requests - in a very flexible and predictable way
 							<img class="demo" src="/assets/demo.png" alt="" style="width: 140px; top: 50px; right: -40px">
 						</div>
 					</p>
@@ -162,7 +162,7 @@
 
 				<section>
 					<h4>Apollo Features #3</h4>
-					<p>In memory cache - normalized data store for remote and local data</p>
+					<p>In-memory cache: normalized data store for remote and local data</p>
 					<div class="d-f">
 						<img src="/assets/redux-cache.png" alt="" style="width: 522px; margin-right: 200px">
 						<img src="/assets/apollo-cache.png" alt="" style="width: 200px">
@@ -202,17 +202,18 @@
 						</li>
 						<li>Increase overall page load performance</li>
 						<li>Error handling</li>
-						<li>Pagination with refetching options (loading state)</li>
+						<li>Pagination with refetching options (loading states)</li>
 						<li>Server-side rendering</li>
+						<li>Self-documented</li>
 					</ul>
 				</section>
 
 				<section>
 					<h4>GraphQL Disadvantages</h4>
 					<ul>
-						<li>Caching request on the server/CDN</li>
-						<li>Calling the database for each resolver</li>
-						<li>Rate Limiting</li>
+						<li>Caching requests on the server/CDN</li>
+						<li>Calling the database for each field in the schema</li>
+						<li>Rate limiting</li>
 					</ul>
 				</section>
 
